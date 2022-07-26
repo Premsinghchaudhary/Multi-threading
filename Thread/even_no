@@ -1,0 +1,36 @@
+package Thread;
+
+import java.util.Scanner;
+
+public class even_no extends Thread{
+	int min,max,i;
+	Scanner sc=new Scanner(System.in);
+	public void run() {
+		even();
+	}
+	public void aceept() {
+	 System.out.println("Enter the starting point of the number :");
+	    min=sc.nextInt();
+	    System.out.println("Enter the ending point of the number :");
+	    max=sc.nextInt();
+	   
+	}
+	
+	    public void even(){
+	   aceept();
+	    try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+
+				e.printStackTrace();
+			}
+			 
+	   for(i=min;i<max;i++ )
+	    	{
+	         		if(i%2==0)
+	         		{
+	    			System.out.println("Even numbers:"+i);	
+	    	    	}    	
+	        }
+	    }
+}
